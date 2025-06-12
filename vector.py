@@ -5,9 +5,9 @@ import os
 import pandas as pd
 
 
-dataFrame = pd.read_csv("reviews.csv")
+dataFrame = pd.read_csv("lahore_restaurants.csv")
 embeddings = OllamaEmbeddings(model="mxbai-embed-large:335m")
-db_location = "./chrome_langchain_db"
+db_location = "./chrome_langchain_lhr_db"
 add_documents = not os.path.exists(db_location)
 
 if add_documents:
